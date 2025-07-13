@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Personal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+  tailwind.config = {
+    darkMode: 'class', // 👈 esto es indispensable
+  }
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+<!-- AOS CSS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<style>
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
+<style>
+  * {
+    outline: 1px solid rgba(255, 0, 0, 0.2);
+  }
+</style>
+</head>
+<body class="font-sans bg-white text-black dark:bg-gradient-to-b dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white">
+
+  <!-- NAVBAR -->
+<header class="fixed top-0 left-0 w-full z-50 bg-white dark:bg-gradient-to-b dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:bg-transparent text-black dark:text-white shadow-md px-4 md:px-8 py-4">
+  <div class="flex justify-between items-center">
+
+    <!-- Botón hamburguesa SOLO visible en md y menores -->
+    <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Menú de navegación -->
+  <nav id="menu" class="hidden flex-col space-y-4 mt-0 sm:mt-0  md:flex items-center justify-center text-center md:flex-row md:space-y-0 md:space-x-6 text-sm md:text-base">
+    <a href="#inicio" class="hover:text-purple-300 text-base md:text-lg">Inicio</a>
+    <a href="#habilidades" class="hover:text-purple-300 text-base md:text-lg">Habilidades</a>
+    <a href="#estudios" class="hover:text-purple-300 text-base md:text-lg">Estudios</a>
+    <a href="#proyectos" class="hover:text-purple-300 text-base md:text-lg">Proyectos</a>
+    <a href="#contacto" class="hover:text-purple-300 text-base md:text-lg">Contacto</a>
+    <button onclick="cambiarModo()" id="modo" class="text-base md:text-lg">☀️</button>
+  </nav>
+</header>
+
+  <!-- INICIO -->
+  <section id="inicio" class="flex flex-col md:flex-row items-center justify-center text-center md:text-left min-h-screen px-4 py-24 gap-12 max-w-screen overflow-hidden bg-gradient-to-b from-[#fdfbfb] via-[#ebedee] to-[#d7dde8] text-black dark:bg-gradient-to-b dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white">
+  
+  <!-- Cohete a la izquierda -->
+  <div class="hidden md:block w-96 sm:w-[150px] md:w-[200px] lg:w-[300px] animate-float">
+    <img src="./image/rocket-312767_1920.png" alt="Rocket" class="w-full h-auto object-contain" />
+  </div>
+
+  <!-- Texto a la derecha -->
+  <div class="flex flex-col items-center ">
+    <div class="relative w-32 h-32 rounded-full overflow-hidden border-4 border-purple-500 flex items-center justify-center mb-6">
+      <img src="./image/kakashi.jpg" alt="kakashi" class="w-full h-full object-cover">
+      <div class="absolute -top-2 px-3 py-1 bg-purple-600 text-white text-xs rounded-full">Inicio</div>
+    </div>
+
+    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-2" data-aos="fade-up" data-aos-delay="100">
+      Hola, soy Hector Jimenez 👋
+    </h1>
+    <h2 class="text-2xl sm:text-3xl md:text-5xl font-bold mb-2" data-aos="fade-up" data-aos-delay="300">
+      Desarrollador Web <span class="text-purple-400 multiple-text"></span>
+    </h2>
+    <p class="max-w-xl hidden sm:block text-base md:text-lg mb-8 text-center" data-aos="fade-up" data-aos-delay="500">
+      Apasionado por crear experiencias digitales 
+    </p>
+
+    <div class="flex space-x-4">
+      <a href="./image/Resumen curricular Héctor Jiménez U.pdf" download
+        class="bg-purple-500 hover:bg-purple-600 text-white font-semibold px-6 py-2 rounded-lg transition mb-8 text-base md:text-lg">
+        Descargar CV
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="min-h-screen flex flex-col items-center justify-center px-6 py-24 text-center bg-[#bfc8da] dark:bg-[#1e1e2f]">
+    <h2 class="text-3xl md:text-5xl font-bold text-purple-400 mb-16" data-aos="zoom-in">Habilidades</h2>
+    <p class="hidden sm:block text-base md:text-lg mb-16 dark:text-white text-black">Dentro de mi trayectoria he logrado adquirir las siguientes habilidades.</p>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-gray-300">
+      <div data-aos="zoom-in" data-aos-delay="200"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="w-32 h-32"/>
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">HTML</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="300"> <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="w-32 h-32"/>
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">CSS</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="400"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" class="w-32 h-32"/>
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">TAILWIND</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="500"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="w-32 h-32" />
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">JAVASCRIPT</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="600"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain-wordmark.svg" class="w-32 h-32" />
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">WORDPRESS</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="700"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" class="w-32 h-32" />
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">SASS</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="800"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"  class="w-32 h-32"/>
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">VSCODE</h1></div>
+      <div data-aos="zoom-in" data-aos-delay="900"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" class="w-32 h-32" />
+      <h1 class="text-base md:text-lg mb-16 dark:text-white text-black">GITHUB</h1></div>
+    </div>
+  </section>
+
+  <!-- ESTUDIOS -->
+ <section id="estudios" class="min-h-screen px-6 py-16 bg-[#ebedee] dark:bg-[#2C2958] dark:text-white">
+  <h2 class="text-3xl md:text-5xl font-bold text-center text-purple-500 mb-12" data-aos="zoom-in">Estudios</h2>
+
+  <div class="space-y-8 max-w-5xl mx-auto">
+
+    <!-- Estudio 1 -->
+    <div  class="bg-white dark:bg-[#1e1e2f] rounded-xl shadow-lg border-t-4 border-purple-400 p-6 flex flex-col md:flex-row justify-between items-start gap-4  transform hover:scale-105 transition duration-300">
+      <div>
+        <h3 class="text-2xl sm:text-3xl md:text-5xl font-bold text-gray-800 dark:text-white">Desarrollo Web Full Stack</h3>
+        <p class="hidden md:block text-lg text-gray-600 dark:text-gray-300">LEXPIN</p>
+        <p class="mt-2 hidden md:block text-lg text-gray-500 dark:text-gray-400">Formación integral en desarrollo web moderno</p>
+        <div class="mt-4 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
+          <span class="hidden md:block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅 2025</span>
+          <span class="md:hidden block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅</span>
+          <span class="hidden md:block bg-green-200 dark:bg-green-700 px-2 py-1 rounded text-base md:text-lg">🟢 En curso</span>
+          <span class="md:hidden block bg-green-200 dark:bg-green-700 px-2 py-1 rounded text-base md:text-lg">🟢</span>
+        </div>
+      </div>
+      <div class="text-purple-400 hidden md:block text-3xl md:text-5xl">
+        🎓
+      </div>
+    </div>
+
+    <!-- Estudio 2 -->
+    <div class="bg-white dark:bg-[#1e1e2f] rounded-xl shadow-lg border-t-4 border-green-500 p-6 flex flex-col md:flex-row justify-between items-start gap-4  transform hover:scale-105 transition duration-300 ">
+      <div>
+        <h3 class="text-2xl sm:text-3xl md:text-5xl font-bold text-blue-600 dark:text-blue-300">Ingeniería Electrónica Mención Automatización y Control</h3>
+        <p class="hidden md:block text-lg text-gray-600 dark:text-gray-300">Universidad Rafael Belloso Chacín URBE</p>
+        <p class="mt-2 hidden md:block text-lg text-gray-500 dark:text-gray-400">Carrera universitaria especializada en sistemas de control</p>
+        <div class="mt-4 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
+          <span class="hidden md:block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅 2022</span>
+          <span class="md:hidden block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅</span>
+          <span class="hidden md:block bg-blue-200 dark:bg-blue-700 px-2 py-1 rounded text-base md:text-lg">📍 Maracaibo, Venezuela</span>
+          <span class="md:hidden block bg-blue-200 dark:bg-blue-700 px-2 py-1 rounded text-base md:text-lg">📍</span>
+        </div>
+      </div>
+      <div class="text-green-500 hidden md:block text-3xl md:text-5xl">
+        🎓
+      </div>
+    </div>
+
+    <!-- Estudio 3 -->
+    <div class="bg-white dark:bg-[#1e1e2f] rounded-xl shadow-lg border-t-4 border-orange-500 p-6 flex flex-col md:flex-row justify-between items-start gap-4 transform hover:scale-105 transition duration-300 ">
+      <div>
+        <h3 class="text-2xl sm:text-3xl md:text-5xl font-bold text-orange-600 dark:text-orange-300">Curso de Inglés como Lengua Extranjera</h3>
+        <p class="hidden md:block text-lg text-gray-600 dark:text-gray-300">CEVAZ</p>
+        <p class="mt-2 hidden md:block text-lg text-gray-500 dark:text-gray-400">Certificación en idioma inglés</p>
+        <div class="mt-4 flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300">
+          <span class="hidden md:block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅 2024</span>
+           <span class="md:hidden block bg-gray-200 dark:bg-gray-700 px-2 py-1 rounded text-base md:text-lg">📅</span>
+          <span class="hidden md:block bg-yellow-200 dark:bg-yellow-700 px-2 py-1 rounded text-base md:text-lg">📍 Maracaibo, Venezuela</span>
+          <span class="md:hidden block bg-yellow-200 dark:bg-yellow-700 px-2 py-1 rounded text-base md:text-lg">📍</span>
+        </div>
+      </div>
+      <div class="text-orange-500 hidden md:block text-3xl md:text-5xl">
+        🎓
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- PROYECTOS -->
+ <section id="proyectos" class="min-h-screen flex flex-col items-center justify-center px-6 py-24 text-center bg-[#bfc8da] dark:bg-[#1e1e2f]">
+  <h2 class="text-3xl md:text-5xl font-bold text-purple-400 mb-8" data-aos="zoom-in">Proyectos</h2>
+
+  <!-- Contenedor principal Swiper -->
+  <div class="swiper w-full mx-auto rounded-xl overflow-hidden shadow-lg">
+    <!-- Wrapper que contiene los slides -->
+    <div class="swiper-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="swiper-slide group relative h-[16rem] sm:h-[24rem] md:h-[28rem] cursor-pointer rounded-2xl">
+        <img src="./image/netflix.png" alt="Alerta de almacenamiento"
+             class="w-full h-full object-cover rounded-xl" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4
+                 bg-gradient-to-b from-purple-600 via-pink-500 to-blue-500 
+                 opacity-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:opacity-90
+                 transition-all duration-700 ease-in-out z-10 rounded-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Clon de la página de Netflix</h3>
+          <p class="text-base md:text-lg italic">Pagina realizada con Html y Tailwind</p>
+          <a href="https://hectorji0110.github.io/Clon_Paginas_Peliculas/proyecto1.html"
+             target="_blank"
+             class="bg-emerald-600 hover:bg-emerald-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             🌐 Ver demo
+          </a>
+          <a href="https://github.com/hectorji0110/Clon_Paginas_Peliculas.git"
+             target="_blank"
+             class="bg-gray-600 hover:bg-gray-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             💻 Código
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="swiper-slide group relative h-[16rem] sm:h-[24rem] md:h-[28rem] cursor-pointer rounded-2xl">
+        <img src="./image/paypal.png" alt="Alerta de almacenamiento"
+             class="w-full h-full object-cover rounded-xl" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4
+                 bg-gradient-to-b from-purple-600 via-pink-500 to-blue-500 
+                 opacity-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:opacity-90
+                 transition-all duration-700 ease-in-out z-10 rounded-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Clon de la página de PayPal</h3>
+          <p class="text-base md:text-lg italic">Pagina realizada con Html y Tailwind</p>
+          <a href="https://hectorji0110.github.io/Pagina_Bank/proyecto2.html"
+             target="_blank"
+             class="bg-emerald-600 hover:bg-emerald-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             🌐 Ver demo
+          </a>
+          <a href="https://github.com/hectorji0110/Pagina_Bank.git"
+             target="_blank"
+             class="bg-gray-600 hover:bg-gray-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             💻 Código
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+        <div class="swiper-slide group relative h-[16rem] sm:h-[24rem] md:h-[28rem] cursor-pointer rounded-2xl">
+        <img src="./image/calculadora.png" alt="calculadora"
+             class="w-full h-full object-cover rounded-xl" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4
+                 bg-gradient-to-b from-purple-600 via-pink-500 to-blue-500 
+                 opacity-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:opacity-90
+                 transition-all duration-700 ease-in-out z-10 rounded-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Realizacion de Calculadora Inteligente</h3>
+          <p class="text-base md:text-lg italic">Pagina realizada con Html, Tailwind y JavaScript</p>
+          <a href="https://hectorji0110.github.io/calculadorajs/calculadora.html"
+             target="_blank"
+             class="bg-emerald-600 hover:bg-emerald-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             🌐 Ver demo
+          </a>
+          <a href="https://github.com/hectorji0110/calculadorajs.git"
+             target="_blank"
+             class="bg-gray-600 hover:bg-gray-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             💻 Código
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="swiper-slide group relative h-[16rem] sm:h-[24rem] md:h-[28rem] cursor-pointer rounded-2xl">
+        <img src="./image/inventario.png" alt="Inventario de productos"
+             class="w-full h-full object-cover rounded-xl" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4
+                 bg-gradient-to-b from-purple-600 via-pink-500 to-blue-500 
+                 opacity-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:opacity-90
+                 transition-all duration-700 ease-in-out z-10 rounded-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Pagina de Inventario simple</h3>
+          <p class="text-base md:text-lg italic">Pagina realizada con Html, Tailwind y JavaScript</p>
+          <a href="https://hectorji0110.github.io/inventariojs/inventario.html"
+             target="_blank"
+             class="bg-emerald-600 hover:bg-emerald-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             🌐 Ver demo
+          </a>
+          <a href="https://github.com/hectorji0110/inventariojs.git"
+             target="_blank"
+             class="bg-gray-600 hover:bg-gray-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+             💻 Código
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="swiper-slide group relative h-[16rem] sm:h-[24rem] md:h-[28rem] cursor-pointer rounded-2xl">
+        <img src="./image/Pagina de Pollo Asado.png" alt="pollo asado"
+            class="w-full h-full object-cover rounded-xl" />
+        <div
+          class="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4
+                bg-gradient-to-b from-purple-600 via-pink-500 to-blue-500 
+                opacity-0 translate-y-[-100%] group-hover:translate-y-0 group-hover:opacity-90
+                transition-all duration-700 ease-in-out z-10 rounded-xl"
+        >
+          <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Realizacion de Pagina de Pollo Asado</h3>
+          <p class="text-base md:text-lg italic">Pagina realizada en Wordpress</p>
+          <a href="https://hectorjimenez-curso23.infinityfreeapp.com/"
+          target="_blank"
+          class="bg-emerald-600 hover:bg-emerald-700 text-white py-1 px-3 rounded text-base md:text-lg mt-2">
+            🌐 Ver demo
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paginación -->
+    <div class="swiper-pagination mt-4"></div>
+
+    <!-- Navegación -->
+    <div class="swiper-button-prev text-purple-700"></div>
+    <div class="swiper-button-next text-purple-700"></div>
+  </div>
+</section>
+
+  <!-- CONTACTO -->
+ <section id="contacto" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 py-16 text-center bg-gradient-to-b from-[#fdfbfb] via-[#ebedee] to-[#d7dde8] text-black dark:bg-gradient-to-b dark:from-[#0f0c29] dark:via-[#302b63] dark:to-[#24243e] dark:text-white">
+  <!-- Imagen lado izquierdo -->
+  <!-- Imagen + texto -->
+  <div class="w-full md:w-1/2 flex flex-col items-center justify-center mb-10 md:mb-0" data-aos="fade-right">
+    <!-- Imagen -->
+    <img src="https://octodex.github.com/images/daftpunktocat-guy.gif" alt="Octocat" class="max-w-screen- h-auto transform hover:scale-105 transition duration-300 mb-6">
+    
+    <!-- Texto animado debajo de la imagen -->
+    <div class="text-xl md:text-2xl font-bold text-purple-400">
+      <img 
+        src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=22&pause=1000&color=8B5CF6&center=true&vCenter=true&width=450&lines=%C2%A1Estoy+listo+para+colaborar!;%C2%A1Contactame!;%C2%A1Trabajemos+juntos!" 
+        alt="Typing SVG"
+        class="mx-auto"
+      />
+    </div>
+  </div>
+
+  <!-- Formulario lado derecho -->
+  <div class="w-full md:w-1/2 space-y-4">
+    <h2 class="text-3xl md:text-5xl font-bold text-purple-400 mb-6">Contáctame</h2>
+    <p class="text-xl md:text-2xl  mb-6">¿Quieres trabajar conmigo? ¡Contáctame!</p>
+
+    <form id="formulario" action="https://formspree.io/f/mnnzaqee" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-4 text-base md:text-lg">
+      <input type="text"  name="nombre" placeholder="Nombre" class="bg-transparent border-2 dark:border-white border-black rounded-xl px-4 py-3 h-20 dark:placeholder-white placeholder-black  focus:outline-none">
+      <input type="text" name="apellido" placeholder="Apellido" class="bg-transparent border-2 dark:border-white border-black rounded-xl px-4 py-3 h-20 dark:placeholder-white placeholder-black  focus:outline-none">
+      <input type="email" name="email" placeholder="E-mail" class="bg-transparent border-2 dark:border-white border-black rounded-xl px-4 py-3 h-20 dark:placeholder-white placeholder-black  focus:outline-none">
+      <input type="tel" name="telefono" placeholder="Número telefónico" class="bg-transparent border-2 dark:border-white border-black rounded-xl px-4 py-3 h-20 dark:placeholder-white placeholder-black  focus:outline-none">
+    
+        <textarea rows="5" name="mensaje" placeholder="Quiero contactarte !!" class="md:col-span-2 bg-transparent border-2 text-base md:text-lg dark:border-white border-black rounded-xl px-4 py-3 w-full h-60 dark:placeholder-white placeholder-black  focus:outline-none"></textarea>
+
+    <button type="submit" class="md:col-span-2  bg-purple-600 hover:bg-purple-700 px-6 py-2 rounded text-white font-medium transition text-base md:text-lg">
+      Enviar mensaje
+    </button>
+    </form>
+
+  <p id="respuesta" class="mt-4 text-green-600 font-semibold"></p>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 bg-[#ebedee] dark:text-white text-base md:text-lg dark:bg-[#2C2958]">
+    © 2025 - Hector Jimenez. Todos los derechos reservados.
+    <div 
+    class="flex justify-center items-center">
+      <a href="https://github.com/hectorji0110" class="w-16 h-16 md:w-20 h-20 rounded-full overflow-hidden hover:border-2  border-gray-100 hover:bg-gray-600 flex items-center justify-center mb-6">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" class="w-12 h-12 md:w-16 h-16"/>
+    </a>
+    <a href="mailto:hectorjimenez0110@gmail.com" class="w-16 h-16 md:w-20 h-20 rounded-full overflow-hidden hover:border-2 hover:bg-gray-600  border-gray-100 flex items-center justify-center mb-6">
+    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" class="w-10 h-10 md:w-16 h-16 rounded-full">
+<path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path><path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path><polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"></polygon><path fill="#c62828" d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"></path><path fill="#fbc02d" d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"></path>
+</svg>
+  </a>
+  </div>
+  </footer>
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./portafolio.js"></script>
+</body>
+</html>
